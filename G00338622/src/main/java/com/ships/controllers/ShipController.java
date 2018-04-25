@@ -2,26 +2,25 @@ package com.ships.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ships.model.Ship;
 import com.ships.services.ShipService;
-import com.ships.services.ShippingCompanyService;
 
 @Controller
 public class ShipController {
 
 	@Autowired
 	ShipService shipService;
-	
-	@Autowired
-	ShippingCompanyService shippingCompanyService;
-	
+
 	// Request mapping maps web request to the controller method
 	@RequestMapping(value = "/showShips", method=RequestMethod.GET)
 	public String listShips(Model model) {
@@ -52,12 +51,14 @@ public class ShipController {
 	
 	// Method for the addShip post request
 	@RequestMapping(value = "/addShip", method=RequestMethod.POST)
-	public String addShipPOST(@ModelAttribute("ship") Ship ship, Model model) {
+	public String addShipPOST(@Valid @ModelAttribute("ship") Ship ship, BindingResult result, Model model) {
+				
+		// If an error is detected redirect to addShip
+		if (result.hasErrors()) {	
+			return "addShip";
+		}
 		
-		// Save the ship
-		shipService.save(ship);
-		
-		// Redirect and display the ships
+		// Redirect and display the ships page
 		return "redirect:showShips";
  	}
 } 
