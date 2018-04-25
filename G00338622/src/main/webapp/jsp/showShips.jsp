@@ -5,6 +5,7 @@
 <html>
 
 	<head>
+	<link href="/css/style.css" rel="stylesheet"></link>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Show Ships</title>
 	</head>

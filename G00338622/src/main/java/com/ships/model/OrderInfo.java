@@ -1,6 +1,5 @@
 package com.ships.model;
 
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.stereotype.Component;
 
@@ -20,9 +20,11 @@ public class OrderInfo {
 	private int oid;
 	@ManyToOne
 	@JoinColumn(name="scid")
+	@NotNull
 	private ShippingCompany shippingCompany;
 	@OneToOne
 	@JoinColumn(name="sid")
+	@NotNull
 	private Ship ship;
 	private String date;
 
@@ -52,6 +54,7 @@ public class OrderInfo {
 	}
 	@Override
 	public String toString() {
-		return "OrderInfo [oid=" + oid + ", shippingCompany=" + shippingCompany + ", ship=" + ship + ", date=" + date + "]";
+		return "OrderInfo [oid=" + oid + ", shippingCompany=" + shippingCompany + ", ship=" + ship + ", date=" + date
+				+ "]";
 	}
 }

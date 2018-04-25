@@ -19,7 +19,7 @@
 			<th>Ship Name</th>
 			<th>Order Date</th>
 		</tr>
-		<c:forEach items="${orderInfo}" var="orderInfo">
+		<c:forEach items="${orderInfos}" var="orderInfo">
 			<tr> 
 		    	<td>${orderInfo.oid}</td>
 		    	<td>${orderInfo.shippingCompany.name}</td>
