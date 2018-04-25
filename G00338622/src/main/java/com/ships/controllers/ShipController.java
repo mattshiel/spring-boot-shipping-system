@@ -58,6 +58,8 @@ public class ShipController {
 			return "addShip";
 		}
 		
+		shipService.save(ship);							
+		
 		// Redirect and display the ships page
 		return "redirect:showShips";
  	}
