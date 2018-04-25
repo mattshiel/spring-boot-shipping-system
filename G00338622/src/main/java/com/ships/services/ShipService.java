@@ -13,7 +13,13 @@ public class ShipService {
 	@Autowired
 	ShipRepository shipRepository;
 
+	// Finds all ships
 	public List<Ship> findAll() {
 		return (List<Ship>) shipRepository.findAll();
+	}
+	
+	// Saves a ship to the repository
+	public Ship save(Ship ship) {		
+		return shipRepository.save(ship);		
 	}
 }

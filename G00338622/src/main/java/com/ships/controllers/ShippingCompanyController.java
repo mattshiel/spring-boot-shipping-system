@@ -15,7 +15,7 @@ public class ShippingCompanyController {
 	ShippingCompanyService shippingCompanyService;
 	
 	// Request mapping maps web request to the controller method
-	@RequestMapping(value = "/showShippingCompany", method=RequestMethod.GET)
+	@RequestMapping(value = "/showShippingCompanies", method=RequestMethod.GET)
 	public String listShippingCompany(Model model) {
 		
 		// Get all shipping companies
@@ -25,6 +25,6 @@ public class ShippingCompanyController {
 		model.addAttribute("shippingCompany", shippingCompany);
 			
 		// Return the page
-		return "showShippingCompany";
+		return "showShippingCompanies";
 	}
 }

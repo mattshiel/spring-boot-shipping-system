@@ -24,6 +24,6 @@ public class OrderInfoController {
 		model.addAttribute("orderInfoService", orderInfo);
 		
 		// Return Page
-		return "showOrderInfo";
+		return "showOrders";
 	}
 }
