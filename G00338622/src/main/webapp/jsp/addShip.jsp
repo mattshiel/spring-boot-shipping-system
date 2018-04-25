@@ -12,7 +12,7 @@
 <title>Add Ships</title>
 </head>
 <body>
-<h1>Add Person</h1>
+<h1>Add Ship</h1>
 	
 		<form:form modelAttribute="ship">
  		<table>

@@ -28,5 +28,6 @@
 	   		</tr>
 		</c:forEach>
 	</table>
+	<a href="/">Home</a>
 </body>
 </html>
