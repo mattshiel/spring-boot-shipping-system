@@ -66,6 +66,14 @@ Choose a web broswer and open http://localhost:8080/
 **Note:**
 > If you receive an error about the MySQL server password, navigate to data.sql in the project and change the username and password to your -u and -p according to your MySQL setup.
 
+
+
+## Program in Action
+
+![program](/media/program.gif)
+
+
+
 ## References
 1. Mr. Gerard Harrison - Lecturer at GMIT
 2. https://medium.com/@gustavo.ponce.ch/spring-boot-spring-mvc-spring-security-mysql-a5d8545d837d
