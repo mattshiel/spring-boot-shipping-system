@@ -16,9 +16,13 @@ The application should be written in Spring Boot based on the skeleton applicati
 
 *Assumes that Eclipse IDE For Java EE Developers, WAMP/MAMP and Spring Tools are installed*
 
-*Eclipse can be downloaded at* **http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen3a**
+**Download Eclipse:**
 
-*WAMP/MAMP can be downloaded at* **http://www.wampserver.com/en/#download-wrapper**
+http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen3a
+
+**Download WAMP** 
+
+http://www.wampserver.com/en/#download-wrapper
 
 *Spring tools can be downloaded through Eclipse*
 
